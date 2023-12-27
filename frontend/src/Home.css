@@ -1,0 +1,96 @@
+/* CSS for Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* CSS for Heading */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  /* Adjust font size for mobile */
+  font-size: 28px;
+}
+
+/* CSS for Main Container */
+.container {
+  margin-top: 20px;
+}
+
+/* CSS for Button */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* Home.css */
+
+/* Style for the Export to CSV button */
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  /* Table cells adjustments */
+  .styled-table th,
+  .styled-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  /* Heading size reduction */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* Container margin adjustment */
+  .container {
+    margin-top: 10px;
+  }
+
+  /* Button size and padding adjustments */
+  .btn-primary {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
