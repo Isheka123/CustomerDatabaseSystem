@@ -1,7 +1,9 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+require('dotenv').config(); // This line loads the environment variables from .env
 
+const port = process.env.PORT; // Accessing the API_URL environment variable
 
 const app = express();
 app.use(cors());
@@ -98,6 +100,6 @@ app.put("/user/:id", (req, res) => {
   });
 });
 
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("Server is running on port 8000");
 });
