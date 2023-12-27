@@ -3,13 +3,16 @@ import axios from 'axios';
 import { useParams,useNavigate } from 'react-router-dom';
 import './Edit.css';
 
+
+const apiurl = process.env.REACT_APP_API_URL; // Accessing the REACT_APP_API_URL environment variable
+
 const Edit = () => {
   const [user, setUser] = useState({});
   const { id } = useParams();
 const nav = useNavigate();
   useEffect(() => {
     // Fetch the user data for the specified ID
-    axios.get(`http://localhost:8000/user/${id}`)
+    axios.get(apiurl+`/user/${id}`)
       .then((response) => {
         setUser(response.data);
       })
@@ -28,7 +31,7 @@ const nav = useNavigate();
 const handleFormSubmit = (e) => {
   e.preventDefault();
   // Update user data
-  axios.put(`http://localhost:8000/user/${id}`, user)
+  axios.put(apiurl+`/user/${id}`, user)
     .then((response) => {
       console.log( response.data);
       // Redirect or perform actions after successful update

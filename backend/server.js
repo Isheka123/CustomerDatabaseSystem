@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
   password: "123456",
   database: "userdata",
 });
-const fastcsv = require("fast-csv");
+
 
 // connection.connect((err) => {
 //   if (err) {

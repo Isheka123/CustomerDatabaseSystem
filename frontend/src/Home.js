@@ -3,12 +3,14 @@ import axios from 'axios';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { CSVLink } from 'react-csv';
+ 
+
+const apiurl = process.env.REACT_APP_API_URL; 
 
 const Home = () => {
   const [users, setUsers] = useState([]);
-
   useEffect(() => {
-    axios.get('http://localhost:8000/')
+    axios.get(apiurl)
       .then((response) => {
         setUsers(response.data);
       })
