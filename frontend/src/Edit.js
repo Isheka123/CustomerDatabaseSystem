@@ -4,8 +4,7 @@ import { useParams,useNavigate } from 'react-router-dom';
 import './Edit.css';
 
 
-const apiurl = process.env.REACT_APP_API_URL; // Accessing the REACT_APP_API_URL environment variable
-
+const apiurl = process.env.REACT_APP_API_URL; 
 const Edit = () => {
   const [user, setUser] = useState({});
   const { id } = useParams();
